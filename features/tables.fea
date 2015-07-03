@@ -19,12 +19,12 @@ table OS/2 {
     # 1   # Latin-1 Supplement
     # 2   # Latin Extended-A
     # 15  # Devanagari 0900-097F
-    16  # Bengali 0980-09FF
+    # 16  # Bengali 0980-09FF
     # 17  # Gurmukhi 0A00-0A7F
     # 18  # Gujarati 0A80-0AFF
     # 19  # Oriya 0B00-0B7F
     # 20  # Tamil 0B80-0BFF
-    # 21  # Telugu 0C00-0C7F
+    21  # Telugu 0C00-0C7F
     # 22  # Kannada 0C80-0CFF
     # 23  # Malayalam 0D00-0D7F
     ;
@@ -57,7 +57,7 @@ table name {
   nameid  8 "Indian Type Foundry";
 
 # Designer
-  nameid  9 "Jyotish Sonowal";
+  nameid  9 "Manushi Parikh";
 
 # Description
   # nameid 10 "";

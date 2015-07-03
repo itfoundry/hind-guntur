@@ -8,7 +8,7 @@ kit.confirm_version('2.1.1')
 family = kit.Family(
     client    = 'Google Fonts',
     trademark = 'Hind',
-    script    = 'Bangla',
+    script    = 'Telugu',
 )
 
 family.set_masters(
