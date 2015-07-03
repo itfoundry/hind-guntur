@@ -3,7 +3,7 @@ languagesystem tel2 dflt;
 languagesystem telu dflt;
 
 # include (../../features/GENERATED_classes.fea);
-include (../../features/extension.fea);
+# include (../../features/extension.fea);
 include (../../features/tables.fea);
 include (../../features/lookups.fea);
 
@@ -15,19 +15,8 @@ include (../../features/lookups.fea);
 # Akhand Ligatures
 # ----------------
 
-feature akhn {
-
-  script DFLT;
-    lookup akhn_new;
-
-  script tel2;
-    lookup akhn_new;
-
-  script telu;
-    lookup akhn_old_1;
-    lookup akhn_old_2;
-
-} akhn;
+# feature akhn {
+# } akhn;
 
 
 # Reph Forms
@@ -100,6 +89,7 @@ feature blwf {
 feature pres {
   lookup pres_1;
   lookup pres_2;
+  # lookup pres_kssa;
 } pres;
 
 
@@ -177,12 +167,12 @@ feature haln {
 # Above- and Below-base Mark Positioning
 # --------------------------------------
 
-include (markclasses.fea);
-
-feature abvm {
-  include (abvm.fea);
-} abvm;
-
-feature blwm {
-  include (blwm.fea);
-} blwm;
+# include (markclasses.fea);
+#
+# feature abvm {
+#   include (abvm.fea);
+# } abvm;
+#
+# feature blwm {
+#   include (blwm.fea);
+# } blwm;
