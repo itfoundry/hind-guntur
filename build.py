@@ -1,13 +1,14 @@
 #! /usr/bin/env python
 
 import hindkit as kit
-kit.confirm_version('0.1.1')
+kit.confirm_version('0.1.2')
 
 # - - -
 
 family = kit.Family(
-    trademark = 'Hind',
-    script    = 'Telugu',
+    trademark = 'Hind Guntur',
+    script = 'Telugu',
+    hide_script_name = True,
 )
 
 family.set_masters(
