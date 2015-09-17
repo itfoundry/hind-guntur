@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 import hindkit as kit
-kit.confirm_version('0.1.2')
+kit.confirm_version('0.2.1')
 
 # - - -
 
@@ -14,8 +14,8 @@ family = kit.Family(
 family.set_masters(
     modules = [
         # 'kerning',
-        # 'mark_positioning',
-        # 'mark_to_mark_positioning',
+        'mark_positioning',
+        'mark_to_mark_positioning',
         # 'devanagari_matra_i_variants',
     ],
 )
@@ -26,7 +26,7 @@ family.set_styles()
 
 builder = kit.Builder(family)
 
-builder.fontrevision = '0.600'
+builder.fontrevision = '0.700'
 
 builder.set_options([
 
@@ -47,5 +47,8 @@ builder.set_options([
 
 builder.generate_designspace()
 builder.generate_fmndb()
+
+kit.builder.WriteFeaturesMarkFDK.kIndianAboveMarks = 'top'
+kit.builder.WriteFeaturesMarkFDK.kIndianBelowMarks = 'bottom'
 
 builder.build()
