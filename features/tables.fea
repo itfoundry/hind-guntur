@@ -15,9 +15,9 @@ table OS/2 {
   FSType 0;
   Panose 2 0 0 0 0 0 0 0 0 0;
   UnicodeRange
-    # 0   # Basic Latin
-    # 1   # Latin-1 Supplement
-    # 2   # Latin Extended-A
+    0   # Basic Latin
+    1   # Latin-1 Supplement
+    2   # Latin Extended-A
     # 15  # Devanagari 0900-097F
     # 16  # Bengali 0980-09FF
     # 17  # Gurmukhi 0A00-0A7F
@@ -95,6 +95,5 @@ table GDEF {
   # 2. Ligatures:  multiple character, spacing glyphs.
   # 3. Marks:      non-spacing combining glyphs.
   # 4. Components: part of single character, spacing glyphs.
-  # GlyphClassDef , , @generated_MARKS, ;
-  GlyphClassDef , , , ;
+  GlyphClassDef , , @COMBINING_MARKS, ;
 } GDEF;

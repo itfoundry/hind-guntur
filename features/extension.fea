@@ -1,0 +1,210 @@
+@CONSONANTS = [
+
+  tlKA
+  tlKHA
+  tlGA
+  tlGHA
+  tlNGA
+  tlCA
+  tlCHA
+  tlJA
+  tlJHA
+  tlNYA
+  tlTTA
+  tlTTHA
+  tlDDA
+  tlDDHA
+  tlNNA
+  tlTA
+  tlTHA
+  tlDA
+  tlDHA
+  tlNA
+  tlPA
+  tlPHA
+  tlBA
+  tlBHA
+  tlMA
+  tlYA
+  tlRA
+  tlLA
+  tlVA
+  tlSHA
+  tlSSA
+  tlSA
+  tlHA
+
+  tlRRA
+  # tlRRRA
+  tlLLA
+  tlLLLA
+
+  tlTSA
+  tlDZA
+
+];
+
+@BEFORE_C2_MATRAS = [
+  tlmAA
+  tlmI
+  tlmII
+  tlmU
+  tlmUU
+  tlmE
+  tlmEE
+  tlmO
+  tlmOO
+  tlmAU
+];
+
+@BELOW_BASE_MATRAS = [
+  tlmvL
+  tlmvLL
+  tlAIlengthmark
+];
+
+@C2 = [
+  tlKAc2
+  tlKHAc2
+  tlGAc2
+  tlGHAc2
+  tlNGAc2
+  tlCAc2
+  tlCHAc2
+  tlJAc2
+  tlJHAc2
+  tlNYAc2
+  tlTTAc2
+  tlTTHAc2
+  tlDDAc2
+  tlDDHAc2
+  tlNNAc2
+  tlTAc2
+  tlTHAc2
+  tlDAc2
+  tlDHAc2
+  tlNAc2
+  tlPAc2
+  tlPHAc2
+  tlBAc2
+  tlBHAc2
+  tlMAc2
+  tlYAc2
+  tlRAc2
+  tlLAc2
+  tlVAc2
+  tlSHAc2
+  tlSSAc2
+  tlSAc2
+  tlHAc2
+  tlRRAc2
+  # tlRRRAc2
+  # tlLLAc2
+  # tlLLLAc2
+  tlKSSAc2
+];
+
+@C2_ALT = [
+  tlSSAc2.kssa
+];
+
+@C2_LIGATURE = [
+  tlTAc2_RAc2
+];
+
+# @C2_SPACING = [
+#   tlKAc2.spacing
+#   tlKHAc2.spacing
+#   tlGAc2.spacing
+#   tlGHAc2.spacing
+#   tlNGAc2.spacing
+#   tlCAc2.spacing
+#   tlCHAc2.spacing
+#   tlJAc2.spacing
+#   tlJHAc2.spacing
+#   tlNYAc2.spacing
+#   tlTTAc2.spacing
+#   tlTTHAc2.spacing
+#   tlDDAc2.spacing
+#   tlDDHAc2.spacing
+#   tlNNAc2.spacing
+#   tlTAc2.spacing
+#   tlTHAc2.spacing
+#   tlDAc2.spacing
+#   tlDHAc2.spacing
+#   tlNAc2.spacing
+#   tlPAc2.spacing
+#   tlPHAc2.spacing
+#   tlBAc2.spacing
+#   tlBHAc2.spacing
+#   tlMAc2.spacing
+#   tlYAc2.spacing
+#   tlRAc2.spacing
+#   tlLAc2.spacing
+#   tlVAc2.spacing
+#   tlSHAc2.spacing
+#   tlSSAc2.spacing
+#   tlSAc2.spacing
+#   tlHAc2.spacing
+#   tlRRAc2.spacing
+#   tlRRRAc2.spacing
+#   tlLLAc2.spacing
+#   tlLLLAc2.spacing
+#   tlKSSAc2.spacing
+# ];
+
+@C2_SPACING = [
+  tlRAc2.spacing
+];
+
+@RA_C2_ALTS = [
+  tlRAc2.01 tlRAc2.02 tlRAc2.03 tlRAc2.04 tlRAc2.05 tlRAc2.06 tlRAc2.07 tlRAc2.08
+  # tlRAc2.09 tlRAc2.10
+];
+
+@RA_C2 = [tlRAc2 @RA_C2_ALTS];
+
+@COMBINING_MARKS = [
+  @BELOW_BASE_MATRAS
+  @C2
+  @C2_ALT
+  @C2_LIGATURE
+  @C2_SPACING
+  @RA_C2_ALTS
+  # tlTAc2.above
+  # tlCandrabindu
+];
+
+@C2_POST = [
+  tlKAc2
+  tlCAc2
+  tlCHAc2
+  tlNAc2
+  tlPAc2
+  tlPHAc2
+  tlBAc2
+  tlBHAc2
+  tlMAc2
+  tlYAc2
+  tlVAc2
+  tlSHAc2
+  tlSAc2
+  # tlLLAc2
+];
+
+# @C2_POST_SPACING = [
+#   tlKAc2.spacing
+#   tlCAc2.spacing
+#   tlCHAc2.spacing
+#   tlNAc2.spacing
+#   tlPAc2.spacing
+#   tlPHAc2.spacing
+#   tlBAc2.spacing
+#   tlBHAc2.spacing
+#   tlMAc2.spacing
+#   tlYAc2.spacing
+#   tlVAc2.spacing
+#   tlSHAc2.spacing
+#   tlSAc2.spacing
+#   tlLLAc2.spacing
+# ];

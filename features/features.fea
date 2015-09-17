@@ -2,8 +2,8 @@ languagesystem DFLT dflt;
 languagesystem tel2 dflt;
 languagesystem telu dflt;
 
-# include (../../features/GENERATED_classes.fea);
-# include (../../features/extension.fea);
+include (../../features/GENERATED_classes.fea);
+include (../../features/extension.fea);
 include (../../features/tables.fea);
 include (../../features/lookups.fea);
 
@@ -87,41 +87,64 @@ feature blwf {
 # ---------------------
 
 feature pres {
-  lookup pres_1;
-  lookup pres_2;
-  # lookup pres_kssa;
+
+  # lookup pres_decompose;
+
+  # Swap TAc2.above and marks
+
+  # lookup pres_ta_c2_above;
+
+  lookup pres_kssa_c2;
+  # Before `lookup pres_ai_lengthmark` so tlKSSAc2 will be handled as one piece.
+
+  lookup pres_tra_A;
+  # Before `lookup pres_ai_lengthmark` so TAc2_RAc2's forming is not disturbed by the AIlengthmark reordering when TAc2_RAc2 follows the base immediately.
+
+  lookup pres_ai_lengthmark;
+
+  lookup pres_c2_spacing;
+
+  lookup pres_tra_B;
+  # After `lookup pres_c2_spacing` so TAc2_RAc2 only forms when it follows the base immediately.
+
+  lookup pres_kssa;
+
+  # lookup pres_x;
+
+  # Consonant-vowel ligatures
+
+  lookup pres_matras;
+
+  # lookup pres_y;
+
 } pres;
 
 
 # Above-base Substitution
 # -----------------------
 
-feature abvs {
-  lookup abvs;
-} abvs;
+# feature abvs {
+# } abvs;
 
 
 # Below-base Substitution
 # -----------------------
 
-feature blws {
-  lookup blws;
-} blws;
+# feature blws {
+# } blws;
 
 
 # Post-base Substitution
 # ----------------------
 
-feature psts {
-  lookup psts;
-} psts;
+# feature psts {
+# } psts;
 
 
 # Halant Forms
 # ------------
 
 feature haln {
-  # lookup haln_traditional;
   lookup haln;
 } haln;
 
@@ -167,12 +190,12 @@ feature haln {
 # Above- and Below-base Mark Positioning
 # --------------------------------------
 
-# include (markclasses.fea);
-#
+include (markclasses.fea);
+
 # feature abvm {
 #   include (abvm.fea);
 # } abvm;
-#
-# feature blwm {
-#   include (blwm.fea);
-# } blwm;
+
+feature blwm {
+  include (blwm.fea);
+} blwm;
