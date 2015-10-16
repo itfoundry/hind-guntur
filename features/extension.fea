@@ -158,7 +158,7 @@
 ];
 
 @RA_C2_ALTS = [
-  tlRAc2.01 tlRAc2.02 tlRAc2.03 tlRAc2.04 tlRAc2.05 tlRAc2.06 tlRAc2.07 tlRAc2.08
+  tlRAc2.01 tlRAc2.02 tlRAc2.03 tlRAc2.04 tlRAc2.05 tlRAc2.06 tlRAc2.07 tlRAc2.08 tlRAc2.09
   # tlRAc2.09 tlRAc2.10
 ];
 

@@ -256,7 +256,9 @@ lookup pres_ai_lengthmark {
 } pres_ai_lengthmark;
 
 lookup pres_c2_spacing {
-  ignore sub @BELOW_BASE_MATRAS tlRAc2';
+
+  ignore sub tlmE tlAIlengthmark tlRAc2';  # RAc2 is placed below AIlengthmark.
+
   # sub
   #   [@BELOW_BASE_MATRAS @C2 @C2_LIGATURE @C2_SPACING]
   #   [@C2 tlmvR tlmvRR]'
@@ -267,6 +269,7 @@ lookup pres_c2_spacing {
     @C2'
     by
     @C2_SPACING;
+
 } pres_c2_spacing;
 
 lookup pres_tra_B {
@@ -278,38 +281,38 @@ lookup pres_kssa {
   sub tlKA @BEFORE_C2_MATRAS tlSSAc2' by tlSSAc2.kssa;
 } pres_kssa;
 
-# lookup pres_x {
-#
-#   @marks = [tlmAA tlmI tlmII tlmU tlmUU tlmE tlmEE tlmO tlmOO tlmAU];
-#
-#   # GROUP 1
-#
-#   sub [tlKA tlGA tlTTHA tlRA tlSHA tlLLA] tlRAc2' by tlRAc2.01;
-#   sub [tlKA tlGA tlTTHA tlRA tlSHA tlLLA] @marks tlRAc2' by tlRAc2.01;
-#
-#   # GROUP 2
-#
-#   sub [tlNYA tlLA] tlRAc2' by tlRAc2.02;
-#   sub [tlNYA tlLA] @marks tlRAc2' by tlRAc2.02;
-#
-#   # GROUP 3
-#
-#   # Default: tlRAc2.03
-#
-#   # sub [tlCA tlJA] tlTAc2.above tlRAc2' by tlRAc2.03;
-#   # sub [tlCA tlJA] @marks tlTAc2.above tlRAc2' by tlRAc2.03;
-#
-#   # GROUP 5
-#
-#   sub [tlGHA tlMA tlHA] tlRAc2' by tlRAc2.05;
-#   sub [tlGHA tlMA tlHA] @marks tlRAc2' by tlRAc2.05;
-#
-#   # GROUP 7
-#
-#   sub [tlJHA tlYA] tlRAc2' by tlRAc2.07;
-#   sub [tlJHA tlYA] @marks tlRAc2' by tlRAc2.07;
-#
-# } pres_x;
+lookup pres_x {
+
+  @marks = [tlmAA tlmI tlmII tlmU tlmUU tlmE tlmEE tlmO tlmOO tlmAU];
+
+  # GROUP 1
+
+  sub [tlKA tlGA tlTTHA tlRA tlSHA tlLLA] tlRAc2' by tlRAc2.01;
+  sub [tlKA tlGA tlTTHA tlRA tlSHA tlLLA] @marks tlRAc2' by tlRAc2.01;
+
+  # GROUP 2
+
+  sub [tlNYA tlLA] tlRAc2' by tlRAc2.02;
+  sub [tlNYA tlLA] @marks tlRAc2' by tlRAc2.02;
+
+  # GROUP 3
+
+  # Default: tlRAc2.03
+
+  # sub [tlCA tlJA] tlTAc2.above tlRAc2' by tlRAc2.03;
+  # sub [tlCA tlJA] @marks tlTAc2.above tlRAc2' by tlRAc2.03;
+
+  # GROUP 5
+
+  sub [tlGHA tlMA tlHA] tlRAc2' by tlRAc2.06;
+  sub [tlGHA tlMA tlHA] @marks tlRAc2' by tlRAc2.06;
+
+  # GROUP 7
+
+  sub [tlJHA tlYA] tlRAc2' by tlRAc2.07;
+  sub [tlJHA tlYA] @marks tlRAc2' by tlRAc2.07;
+
+} pres_x;
 
 # Consonant-vowel ligatures
 
@@ -768,92 +771,92 @@ lookup pres_matras {
 
 } pres_matras;
 
-# lookup pres_y {
-#
-#   # GROUP 1
-#
-#   sub
-#     [
-#       tlKU tlKUU
-#       tlGU tlGUU
-#       tlTTHU tlTTHUU
-#       tlRU tlRUU
-#       tlSHU tlSHUU
-#       tlLLU tlLLUU
-#     ]
-#     @RA_C2' by tlRAc2.04;
-#
-#   # GROUP 2
-#
-#   sub
-#     [
-#       # tlNYU tlNYUU
-#       tlLU tlLUU
-#     ]
-#     @RA_C2' by tlRAc2.05;
-#
-#   sub [tlNYU tlNYUU] @RA_C2' by tlRAc2.09;
-#
-#   # GROUP 3
-#
-#   sub
-#     [
-#       tlKHU tlKHUU
-#       # tlNGU tlNGUU
-#       tlCU tlCUU
-#       tlCHU tlCHUU
-#       # tlJU tlJUU
-#       tlTTU tlTTUU
-#       tlDDU tlDDUU
-#       tlDDHU tlDDHUU
-#       tlNNU tlNNUU
-#       tlTU tlTUU
-#       tlTHU tlTHUU
-#       tlDU tlDUU
-#       tlDHU tlDHUU
-#       tlNU tlNUU
-#       tlPU tlPUU
-#       tlPHU tlPHUU
-#       tlBU tlBUU
-#       tlBHU tlBHUU
-#       tlVU tlVUU
-#       tlSSU tlSSUU
-#       tlSU tlSUU
-#       tlRRU tlRRUU
-#       # tlRRRU tlRRRUU
-#       tlLLLU tlLLLUU
-#     ]
-#     @RA_C2' by tlRAc2.06;
-#
-#   sub
-#     [
-#       tlCU tlCUU
-#       # tlJU tlJUU
-#     ]
-#     tlTAc2.above @RA_C2' by tlRAc2.06;
-#
-#   sub [tlNGU tlNGUU] @RA_C2' by tlRAc2.08;
-#
-#   # GROUP 5
-#
-#   sub
-#     [
-#       tlGHU tlGHUU tlGHO
-#       tlMU tlMUU tlMO
-#       tlHU tlHUU
-#     ]
-#     @RA_C2' by tlRAc2.08;
-#
-#   # GROUP 7
-#
-#   sub
-#     [
-#       tlJHU tlJHUU tlJHO
-#       tlYU tlYUU tlYO
-#     ]
-#     @RA_C2' by tlRAc2.10;
-#
-# } pres_y;
+lookup pres_y {
+
+  # GROUP 1
+
+  sub
+    [
+      tlKU tlKUU
+      tlGU tlGUU
+      tlTTHU tlTTHUU
+      tlRU tlRUU
+      tlSHU tlSHUU
+      tlLLU tlLLUU
+    ]
+    @RA_C2' by tlRAc2.04;
+
+  # GROUP 2
+
+  sub
+    [
+      # tlNYU tlNYUU
+      tlLU tlLUU
+    ]
+    @RA_C2' by tlRAc2.05;
+
+  sub [tlNYU tlNYUU] @RA_C2' by tlRAc2.09;
+
+  # GROUP 3
+
+  sub
+    [
+      tlKHU tlKHUU
+      # tlNGU tlNGUU
+      tlCU tlCUU
+      tlCHU tlCHUU
+      # tlJU tlJUU
+      tlTTU tlTTUU
+      tlDDU tlDDUU
+      tlDDHU tlDDHUU
+      tlNNU tlNNUU
+      tlTU tlTUU
+      tlTHU tlTHUU
+      tlDU tlDUU
+      tlDHU tlDHUU
+      tlNU tlNUU
+      tlPU tlPUU
+      tlPHU tlPHUU
+      tlBU tlBUU
+      tlBHU tlBHUU
+      tlVU tlVUU
+      tlSSU tlSSUU
+      tlSU tlSUU
+      tlRRU tlRRUU
+      # tlRRRU tlRRRUU
+      tlLLLU tlLLLUU
+    ]
+    @RA_C2' by tlRAc2.06;
+
+  # sub
+  #   [
+  #     tlCU tlCUU
+  #     # tlJU tlJUU
+  #   ]
+  #   tlTAc2.above @RA_C2' by tlRAc2.06;
+
+  sub [tlNGU tlNGUU] @RA_C2' by tlRAc2.08;
+
+  # GROUP 5
+
+  sub
+    [
+      tlGHU tlGHUU tlGHO
+      tlMU tlMUU tlMO
+      tlHU tlHUU
+    ]
+    @RA_C2' by tlRAc2.09;
+
+  # GROUP 7
+
+  sub
+    [
+      tlJHU tlJHUU tlJHO
+      tlYU tlYUU tlYO
+    ]
+    @RA_C2' by tlRAc2.09;
+
+} pres_y;
 
 
 # Halant Forms
